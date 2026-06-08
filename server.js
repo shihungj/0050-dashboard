@@ -6,10 +6,6 @@ const PORT = 3000;
 // 提供 public 資料夾
 app.use(express.static("public"));
 
-// 首頁測試
-app.get("/", (req, res) => {
-  res.send("0050 Dashboard API Running");
-});
 
 // API測試
 app.get("/api/quote", async (req, res) => {
