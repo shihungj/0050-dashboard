@@ -1,12 +1,23 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+// 靜態檔案
+app.use(express.static(path.join(__dirname, "public")));
+
+// 首頁
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// API
 app.get("/api/quote", async (req, res) => {
-
   try {
 
     const response = await fetch(
@@ -33,7 +44,6 @@ app.get("/api/quote", async (req, res) => {
     });
 
   }
-
 });
 
 app.listen(PORT, () => {
