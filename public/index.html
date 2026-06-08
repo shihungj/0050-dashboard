@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>0050 加碼決策儀表板</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>0050 加碼決策儀表板</h1>
+
+<section class="card">
+
+<h2>即時價格</h2>
+
+<div id="price">載入中...</div>
+
+<div id="drawdown"></div>
+
+<div id="updateTime"></div>
+
+</section>
+
+<section class="card">
+
+<h2>目前判定結果</h2>
+
+<div id="decision"></div>
+
+</section>
+
+<section class="card">
+
+<h2>0050 分級加碼決策表</h2>
+
+<table id="decisionTable">
+
+<thead>
+<tr>
+<th>區域</th>
+<th>價格</th>
+<th>跌幅</th>
+<th>建議加碼</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr data-min="102.4" data-max="999">
+<td>觀察區</td>
+<td>102.4 ~ 107.8</td>
+<td>0~5%</td>
+<td>定期定額</td>
+</tr>
+
+<tr data-min="97" data-max="102.4">
+<td>第一加碼區</td>
+<td>97 ~ 102.4</td>
+<td>5~10%</td>
+<td>5000元</td>
+</tr>
+
+<tr data-min="91.6" data-max="97">
+<td>第二加碼區</td>
+<td>91.6 ~ 97</td>
+<td>10~15%</td>
+<td>5000元</td>
+</tr>
+
+<tr data-min="86.2" data-max="91.6">
+<td>第三加碼區</td>
+<td>86.2 ~ 91.6</td>
+<td>15~20%</td>
+<td>5000元</td>
+</tr>
+
+<tr data-min="80.9" data-max="86.2">
+<td>第四加碼區</td>
+<td>80.9 ~ 86.2</td>
+<td>20~25%</td>
+<td>5000元</td>
+</tr>
+
+<tr data-min="75.5" data-max="80.9">
+<td>第五加碼區</td>
+<td>75.5 ~ 80.9</td>
+<td>25~30%</td>
+<td>5000元</td>
+</tr>
+
+<tr data-min="0" data-max="75.5">
+<td>歷史級機會區</td>
+<td>< 75.5</td>
+<td>>30%</td>
+<td>5000元</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section class="card">
+
+<h2>最佳進場訊號評分表</h2>
+
+<table>
+<tr><th>指標</th><th>權重</th></tr>
+<tr><td>KD &lt;20後黃金交叉</td><td>★★★★★</td></tr>
+<tr><td>RSI &lt;30</td><td>★★★★</td></tr>
+<tr><td>站回5日線</td><td>★★★★</td></tr>
+<tr><td>接近季線或年線</td><td>★★★★★</td></tr>
+<tr><td>外資賣超縮小</td><td>★★★★</td></tr>
+<tr><td>爆量長下影線</td><td>★★★★</td></tr>
+</table>
+
+</section>
+
+<section class="card">
+
+<h2>最危險抄底訊號表</h2>
+
+<table>
+
+<tr>
+<th>危險程度</th>
+<th>訊號</th>
+</tr>
+
+<tr><td>★★★★★</td><td>KD持續向下</td></tr>
+<tr><td>★★★★★</td><td>MACD綠柱擴大</td></tr>
+<tr><td>★★★★★</td><td>跌破季線且季線下彎</td></tr>
+<tr><td>★★★★</td><td>外資連5日大賣超</td></tr>
+<tr><td>★★★★</td><td>反彈量縮</td></tr>
+<tr><td>★★★★</td><td>跌破支撐無法站回</td></tr>
+
+</table>
+
+</section>
+
+<section class="card">
+
+<h2>最值得關注價格帶</h2>
+
+<ul>
+<li>97 元</li>
+<li>91.6 元</li>
+<li>86.2 元</li>
+<li>80.9 元</li>
+<li>75.5 元</li>
+</ul>
+
+</section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

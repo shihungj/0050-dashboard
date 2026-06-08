@@ -1,0 +1,12 @@
+{
+  "name": "0050-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "yahoo-finance2": "^2.13.3"
+  }
+}
